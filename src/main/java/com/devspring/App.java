@@ -14,10 +14,13 @@ public class App
 {
     public static void main( String[] args )
     {
-    	//BeanFactory bf=new XmlBeanFactory(new FileSystemResource("spring.xml"));
+    	
     	
     	ApplicationContext bf=new ClassPathXmlApplicationContext("spring.xml");
-    	developer dev=(developer)bf.getBean(developer.class);
+    	developer dev=(developer)bf.getBean(developer.class);//object
     	dev.coding();
+    	System.out.println("first dev name is : "+dev.getDevName());
+    	
+    	
     }
 }

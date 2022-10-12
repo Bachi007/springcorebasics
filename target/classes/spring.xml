@@ -4,6 +4,10 @@
     xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
- <bean id="dev" class="com.devspring.developer"></bean>
+ <bean id="dev" class="com.devspring.developer">
+ <constructor-arg value="bhaskara"></constructor-arg>
+ <property name="lap" ref="lap2"></property>
+</bean>
+<bean id="lap2" class="com.devspring.laptop"></bean>
 
 </beans>
